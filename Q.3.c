@@ -7,15 +7,14 @@ int main()
     // program for converting value from celcious to fahrenheit
     printf("Enter the temprature in celcious:\n");
     scanf("%f", &c);
-    intof = c * (9 / 5) + 32;
-    printf(" Temprature in fahrenheit= %.2f degree", intof);
+    intof = c * (9.0 / 5.0) + 32.0;
+    printf(" Temprature in fahrenheit= %.2f degree \n", intof);
 
     // program for converting value from  fahrenheit to celcious
     printf("Enter the temprature in fahrenheit:\n");
     scanf("%f", &f);
-    intoc = (5.0 / 9.0) * (f - 32);
-    printf(" Temprature in celcious= %.2f degree ", intoc);
+    intoc = (5.0 / 9.0) * (f - 32.0);
+    printf(" Temprature in celcious= %.2f degree\n", intoc);
 
     return 0;
-
 }
