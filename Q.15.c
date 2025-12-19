@@ -1,32 +1,46 @@
-#include <math.h>
 #include <stdio.h>
 
-int main()
-{
-    int n, sum = 0, r, count = 0;
-    printf("Enter any integer number\n");
-    scanf("%d", &n);
-    int originalNumber = n;
-    int t = n;
-    while (n > 0)
-    {
-        r = n % 10;
-        count++;
-    }
-    while (t != 0)
-    {
-        r = t % 10;
-        sum += pow(r, count);
+int main() {
+
+    int original_value, sum = 0, r = 0, count_digit = 0;
+    printf("Enter any positive integer number: ");
+    scanf("%d", &original_value);
+
+    if (original_value < 0) {
+        printf("Invalid input\n");
+        return 1;
     }
 
-    if (originalNumber == sum)
-    {
-        printf("Entered number is armstrong: %d\n", originalNumber);
+    int n = original_value;
+
+    // Counting digits
+    if (n == 0)
+        count_digit = 1;
+
+    while (n != 0) {
+        count_digit++;
+        n = n / 10;
     }
+
+    // Calculating Armstrong sum
+    n = original_value;
+
+    while (n != 0) {
+        r = n % 10;
+
+        int power = 1;
+        for (int i = 0; i < count_digit; i++) {
+            power = power * r;
+        }
+
+        sum += power;
+        n = n / 10;
+    }
+
+    if (original_value == sum)
+        printf("\nEntered number is Armstrong.\n");
     else
-    {
-        printf("Number is not armstrong \n");
-    }
+        printf("\nEntered number is NOT Armstrong.\n");
 
     return 0;
 }
