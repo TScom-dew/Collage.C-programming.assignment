@@ -1,17 +1,18 @@
 #include <stdio.h>
-int main()
-{
-    int n, fact = 0;
+
+int main(){
+    // your code gose here
+    
+    int n, fact = 1, t;
     printf("Enter any integer number\n");
     scanf("%d", &n);
-
-    while (n = !0)
+    t=n;
+    while (n > 0)
     {
-        int r = n % 10;
-        fact *= r;
-        n = n / 10;
+        fact *= n;
+        n--;
     }
-    printf("Factorial of %d : %d\n", n, fact);
+    printf("Factorial of %d is: %d\n", t, fact);
 
     return 0;
 }
