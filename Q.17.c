@@ -1,8 +1,6 @@
 #include <stdio.h>
 
 int main(){
-    // your code gose here
-    
     int n, fact = 1, t;
     printf("Enter any integer number\n");
     scanf("%d", &n);
@@ -16,3 +14,4 @@ int main(){
 
     return 0;
 }
+
