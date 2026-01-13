@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /*
-Standard C does not support nested functions; you cannot define a function within the body of another function. All functions in standard C must be defined at the global (file) scope. 
+Standard C does not support nested functions; you cannot define a function within the body of another function.
+All functions in standard C must be defined at the global (file) scope. 
 However, some compilers, most notably the GNU C Compiler (GCC), offer nested functions as a non-portable extension. 
 Standard C Alternatives
 */
@@ -24,3 +25,4 @@ int main() {
     return 0;
 }
 */
+
